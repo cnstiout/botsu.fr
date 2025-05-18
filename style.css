@@ -25,6 +25,27 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Base';
+    src: url('bianzhidai-Base.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messier';
+    src: url('bianzhidai-Messier.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Messy';
+    src: url('bianzhidai-Messy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 body {
@@ -33,34 +54,41 @@ body {
 h1.mess {
   color: #ff0b00;
     font-size: 128px;
-    margin-top: -158px;
-    margin-left: 180px;
+    margin-top: -150px;
+    margin-left: 200px;
     margin-bottom: 30px;
     font-family: 'Mess';
 }
 h1.terminal {
   color: #ffb0b0;
     font-size: 128px;
-    margin-top: -160px;
-    margin-left: 180px;
+    margin-top: -180px;
+    margin-left: 200px;
     margin-bottom: 0;
     font-family: 'Terminal';
 }
 
-.HEAD {
-    background-color:#ffe2dd;
-    border: double;
+img.MIRROIR {
+    height: 128px;
 }
 
 h2 {
   color: black;
     font-family: 'Terminal';
     font-size: 52px;
+    background-color: chartreuse
 }
 h3 {
-  color: black;
-    font-family: 'Terminal Open';
-    font-size: 24px;
+    color: hotpink;
+    font-family: 'Messy';
+    font-size: 64px;
+    margin-bottom: 0;
+}
+h3:hover {
+    color: black;
+    font-family: 'Messy';
+    font-size: 64px;
+    margin-bottom: 0;
 }
 a {
     font-family: 'Terminal';
@@ -75,7 +103,7 @@ a:hover {
     justify-content: space;
     align-items: flex-start;
     gap: 3rem; /* espace entre les deux colonnes */
-    margin-top: 2rem;
+    margin-top: 0;
     flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
 }
 
@@ -95,3 +123,26 @@ a {
     text-decoration: none;
     color: #222;
 }
+
+p {
+    font-family: 'terminal';
+    font-size: 128px;
+    margin: 0;
+}
+
+      video.original-video {
+        display: none;
+      }
+      div.ascii-video {
+        white-space: pre;
+        font-family: monospace;
+        font-size: 9px;
+        line-height: 8px;
+        color: green;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+      canvas.scaled-video {
+        display: none;
+      }
