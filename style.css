@@ -33,19 +33,25 @@ body {
 h1.mess {
   color: #ff0b00;
     font-size: 128px;
-    margin-top: -128px;
+    margin-top: -158px;
     margin-left: 180px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     font-family: 'Mess';
 }
 h1.terminal {
   color: #ffb0b0;
     font-size: 128px;
-    margin-top: -130px;
+    margin-top: -160px;
     margin-left: 180px;
     margin-bottom: 0;
     font-family: 'Terminal';
 }
+
+.HEAD {
+    background-color:#ffe2dd;
+    border: double;
+}
+
 h2 {
   color: black;
     font-family: 'Terminal';
