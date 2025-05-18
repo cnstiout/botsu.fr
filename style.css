@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Terminal';
+    src: url('Terminal-Grotesque.woff2') format('woff2'),
+        url('Terminal-Grotesque.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mess';
+    src: url('Mess-Light.woff2') format('woff2'),
+        url('Mess-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Terminal Open';
+    src: url('TerminalGrotesque-Open.woff2') format('woff2'),
+        url('TerminalGrotesque-Open.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+  background-color: white;
+}
+h1.mess {
+  color: #ff0b00;
+    font-size: 128px;
+    margin-top: -128px;
+    margin-left: 180px;
+    margin-bottom: 0;
+    font-family: 'Mess';
+}
+h1.terminal {
+  color: #ffb0b0;
+    font-size: 128px;
+    margin-top: -130px;
+    margin-left: 180px;
+    margin-bottom: 0;
+    font-family: 'Terminal';
+}
+h2 {
+  color: black;
+    font-family: 'Terminal';
+    font-size: 52px;
+}
+h3 {
+  color: black;
+    font-family: 'Terminal Open';
+    font-size: 24px;
+}
+a {
+    font-family: 'Terminal';
+  color: black;
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+.container {
+    display: flex;
+    justify-content: space;
+    align-items: flex-start;
+    gap: 3rem; /* espace entre les deux colonnes */
+    margin-top: 2rem;
+    flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+}
+
+.left {
+    width: 200px;
+}
+.right {
+    width: auto; /* ou ajuste à ta convenance */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
