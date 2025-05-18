@@ -173,6 +173,7 @@ p.heure {
 }
 
 p:hover {
-  font-family: 'Terminal open';
+    color: aliceblue;
+    background-color: black;
     margin: 0;
 }
