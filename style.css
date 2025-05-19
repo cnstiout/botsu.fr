@@ -121,7 +121,7 @@ h3:hover {
 ------------------------ */
 
 a.Pseudo {
-  font-size: 32px;
+  font-size: 128px;
   color: #000000;
 }
 
@@ -156,6 +156,10 @@ a.Pseudo:hover {
 
 img.MIRROIR {
   height: 128px;
+}
+
+img:hover {
+  background-color: hotpink;
 }
 
 /* -----------------------
