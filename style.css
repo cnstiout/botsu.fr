@@ -70,6 +70,7 @@ a {
   font-family: 'Terminal';
   text-decoration: none;
   color: #222;
+  font-size: 1em;
 }
 
 a:hover {
