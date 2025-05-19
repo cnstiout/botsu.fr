@@ -115,7 +115,7 @@ h2:hover {
 }
 
 h3 {
-  font-family: 'Messy';
+  font-family: 'Base';
   font-size: 2em;
   color: hotpink;
   margin-bottom: 0;
@@ -156,7 +156,7 @@ a.Pseudo:hover {
 }
 
 .right {
-  width: auto;
+  width: 600px;
 }
 
 /* -----------------------
@@ -189,4 +189,22 @@ p:hover {
     color: aliceblue;
     background-color: black;
     margin: 0;
+}
+
+.titre-centre {
+  padding: 20px 40px;
+  font-family: 'Terminal';
+  font-size: 3em;
+  text-align: center;
+  color: black;
+  border: 8px solid #00d7ff;
+  animation: alternanceCouleur 3s infinite;
+}
+
+/* Animation qui change la couleur de la bordure */
+@keyframes alternanceCouleur {
+  0%   { border-color: #00d7ff; }
+  33%  { border-color: #6060ff; }
+  66%  { border-color: #37ff37; }
+  100% { border-color: #00d7ff; }
 }
