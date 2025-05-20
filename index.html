@@ -61,7 +61,7 @@
             <ul>
                 <li><a class="Pseudo" href="https://mail.google.com/">Mail</a></li>
                 <li><a class="Pseudo" href="https://drive.google.com/">Drive</a></li>
-                <li><img src="icon_kirby.png" alt="kirby !" width="128" /></li>
+                <li><img src="images/icon_kirby.png" alt="kirby !" width="128" /></li>
                 
             </ul>
 
@@ -69,17 +69,77 @@
             
             <h3>Ce que je fais</h3>
             <ul>
-                <li><a class="Pseudo" href="photos">Macros</a></li>
-                <li><a class="Pseudo" href="https://koka99.itch.io/">Itch.io</a></li>
-                <li><a class="Pseudo" href="https://github.com/cnstiout">Github</a></li>
-                <li><a class="Pseudo" href="contact.html">Mon Mail</a></li>
+                <li><a  href="photos">Macros</a></li>
+                <li><a  href="https://koka99.itch.io/">Itch.io</a></li>
+                <li><a  href="https://github.com/cnstiout">Github</a></li>
+                <li><a  href="contact.html">MonMail</a></li>
             </ul>
-            
-            
-            
-            
         </div>
+        
+        <div class="horaire">
+                <h2 >L'heure</h2>
+                <ul>
+                    <li><span id="clock"></span></li>
+                    <script>
+                      function updateClock() {
+                        const now = new Date();
 
+                        const jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+                        const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                                      'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+                        const jourNom = jours[now.getDay()];
+                        const jour = now.getDate().toString();
+                        const moisNom = mois[now.getMonth()];
+                        const annee = now.getFullYear();
+
+                        const heures = now.getHours().toString().padStart(2, '0');
+                        const minutes = now.getMinutes().toString().padStart(2, '0');
+                        const secondes = now.getSeconds().toString().padStart(2, '0');
+
+                        const heureStr = `${heures}:${minutes}:${secondes}`;
+
+                        // Création d’un tableau pour chaque ligne
+                        const lignes = [
+                          jourNom,
+                          jour,
+                          moisNom,
+                          annee,
+                          heureStr
+                        ];
+
+                        // On joint chaque ligne avec un <br> (saut de ligne HTML)
+                        document.getElementById('clock').innerHTML = lignes.join('<br>');
+                      }
+
+                      setInterval(updateClock, 1000);
+                      updateClock();
+                    </script>
+                </ul>
+        
+            
+            
+            <h2 >La Semaine</h2>
+            <ul>
+                
+                <li><p class="semaine">LUNDI</p></li>
+                <li><p class="semaine">* Poubelle noires</p></li>
+                <li><p class="semaine">MARDI</p></li>
+                <li><p class="semaine">* Psycologue</p></li>
+                <li><p class="semaine">* Faire une lessive</p></li>
+                <li><p class="semaine">MERCREDI</p></li>
+                <li><p class="semaine">* CCAS</p></li>
+                <li><p class="semaine">* Poubelle blanches</p></li>
+                <li><p class="semaine">JEUDI</p></li>
+                <li><p class="semaine">* Faire une liste de course</p></li>
+                <li><p class="semaine">VENDREDI</p></li>
+                <li><p class="semaine">* Auto école</p></li>
+                <li><p class="semaine">* Poubelle noires</p></li>
+                <li><p class="semaine">SAMEDI</p></li>
+                <li><p class="semaine">* Marché</p></li>
+                <li><p class="semaine">DIMANCHE</p></li>
+            </ul>
+        </div>
         <!-- Bloc musique / playlist -->
         <div>
             <h2 class="albums">PLAYLIST</h2>
@@ -94,35 +154,16 @@
                 <li><a href="https://youtu.be/naz_RVh48vg?si=Eu7dQFT91YxDa-Lq">[ Driving Japan ] Go to Mount Fuji and the lakes around it. Enjoy the Mt. Fuji every angle.　富士山ドライブ</a></li>
                 <li><a href="https://youtu.be/eHxbMa2RVTQ?si=TR5RSWj8-VqTNppu">Coral Reef Aquarium - 4K HDR 60 fps - no loop</a></li>
                 <li><a href="https://youtu.be/w-VlBV4hmcE?si=I3VMPVtga58UyYat">🌊 𝘣𝘺 𝘵𝘩𝘦 𝘳𝘪𝘷𝘦𝘳𝘴𝘪𝘥𝘦... 𝘮𝘰𝘴𝘵 𝘳𝘦𝘭𝘢𝘹𝘪𝘯𝘨 𝘢𝘯𝘪𝘮𝘢𝘭 𝘤𝘳𝘰𝘴𝘴𝘪𝘯𝘨 𝘮𝘶𝘴𝘪𝘤 (𝘴𝘭𝘰𝘸𝘦𝘥 + 𝘳𝘦𝘷𝘦𝘳𝘣 + 𝘳𝘪𝘷𝘦𝘳 𝘢𝘮𝘣𝘪𝘢𝘯𝘤𝘦)</a></li>
+                <li><a href="https://youtu.be/Gwe5CQsGRzo?si=o4K96aVHj87tNcpa">slowlife... most relaxing garden of france - NO MUSIC - NO LOOP - HD 50FPS </a></li>
                 
             </ul>
         </div>
-        <div class="semaine">
-            <h2 >La Semaine</h2>
-            <ul>
-                
-                <li><p class="semaine">LUNDI</p></li>
-                <li><p class="semaine">* Poubelle noires</p></li>
-                <li><p class="semaine">MARDI</p></li>
-                <li><p class="semaine">* Psycologue</p></li>
-                <li><p class="semaine">* Faire une lessive</p></li>
-                <li><p class="semaine">MERCREDI</p></li>
-                <li><p class="semaine">* CCAS</p></li>
-                <li><p class="semaine">* Poubelle blanches</p></li>
-                <li><p class="semaine">JEUDI</p></li>
-                <li><p class="semaine">* Faire une liste de course pour la semaine</p></li>
-                <li><p class="semaine">VENDREDI</p></li>
-                <li><p class="semaine">* Auto école</p></li>
-                <li><p class="semaine">* Poubelle noires</p></li>
-                <li><p class="semaine">SAMEDI</p></li>
-                <li><p class="semaine">* Marché</p></li>
-                <li><p class="semaine">DIMANCHE</p></li>
-            </ul>
-        </div>
+        
+        
         <div class="rituels">
             <h2 class="rituels">La Journée</h2>
             <ul>
-                <li> <img src="immeuble.jpg" alt="immeuble !" width="512px" /></li>
+                <li> <img src="images/immeuble.jpg" alt="immeuble !" width="512px" /></li>
                 <li><p class="heure">REVEIL</p></li>
                 <li><p>* Se lever</p></li>
                 <li><p>* Aller au Toilette</p></li>
@@ -139,7 +180,7 @@
                 <li><p>* Faire la Vaisselle</p></li>
                 <li><p>* Course ?</p></li>
                 <li><p>* Nourrir Petit Chat</p></li>
-                <li> <img src="DSC_0015.jpg" alt="Photos !" width="512px" /></li>
+                <li> <img src="images/DSC_0015.jpg" alt="Photos !" width="512px" /></li>
                 <li><p class="heure">APRES MANGER</p></li>
                 <li><p>* Ecrire dans le journal</p></li>
                 <li><p>* Nettoyage rapide de la cuisine</p></li>
@@ -148,7 +189,7 @@
                 <li><p>* Aller au Toilette</p></li>
                 <li><p>* Faire un petit rangement express</p></li> 
                 <li><p>* Nourrir Petit Chat</p></li>
-                <li> <img src="shroom.png" alt="Shrooms !" width="512px" /></li>
+                <li> <img src="images/shroom.png" alt="Shrooms !" width="512px" /></li>
                 <li><p class="heure">FATIGUER</p></li>
                 <li><p>* Nourrir Petit Chat</p></li>
                 <li><p>* Jeter la poubelles ?</p></li>

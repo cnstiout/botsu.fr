@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'Terminal';
-  src: url('Terminal-Grotesque.woff2') format('woff2'),
-       url('Terminal-Grotesque.woff') format('woff');
+  src: url('fonts/Terminal-Grotesque.woff2') format('woff2'),
+       url('fonts/Terminal-Grotesque.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,8 +13,8 @@
 
 @font-face {
   font-family: 'Mess';
-  src: url('Mess-Light.woff2') format('woff2'),
-       url('Mess-Light.woff') format('woff');
+  src: url('fonts/Mess-Light.woff2') format('woff2'),
+       url('fonts/Mess-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -22,16 +22,16 @@
 
 @font-face {
   font-family: 'pic nic';
-  src: url('PicNic-Regular.woff2') format('woff2'),
-       url('PicNic-Regular.woff') format('woff');
+  src: url('fonts/PicNic-Regular.woff2') format('woff2'),
+       url('fonts/PicNic-Regular.woff') format('woff');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Terminal Open';
-  src: url('TerminalGrotesque-Open.woff2') format('woff2'),
-       url('TerminalGrotesque-Open.woff') format('woff');
+  src: url('fonts/TerminalGrotesque-Open.woff2') format('woff2'),
+       url('fonts/TerminalGrotesque-Open.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: 'Base';
-  src: url('bianzhidai-Base.woff') format('woff');
+  src: url('fonts/bianzhidai-Base.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -47,7 +47,7 @@
 
 @font-face {
   font-family: 'Messier';
-  src: url('bianzhidai-Messier.woff') format('woff');
+  src: url('fonts/bianzhidai-Messier.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@
 
 @font-face {
   font-family: 'Messy';
-  src: url('bianzhidai-Messy.woff') format('woff');
+  src: url('fonts/bianzhidai-Messy.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -185,6 +185,12 @@ p.heure {
   font-size: 200px;
 }
 
+.semaine {
+  font-family: 'Terminal';
+  font-size: 1em;
+  margin: 0;
+}
+
 p:hover {
     color: aliceblue;
     background-color: black;
@@ -208,3 +214,9 @@ p:hover {
   66%  { border-color: #37ff37; }
   100% { border-color: #00d7ff; }
 }
+
+  #clock {
+    font-family: 'Messier';
+    font-size: 2rem;
+    color: #333;
+  }
