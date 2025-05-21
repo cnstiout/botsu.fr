@@ -46,6 +46,15 @@
 }
 
 @font-face {
+  font-family: 'cube';
+  src: url('fonts/bianzhidai_noBG-Cloud.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
   font-family: 'Messier';
   src: url('fonts/bianzhidai-Messier.woff') format('woff');
   font-weight: normal;
@@ -56,6 +65,14 @@
 @font-face {
   font-family: 'Messy';
   src: url('fonts/bianzhidai-Messy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avara Black';
+  src: url('fonts/Avara-Black.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -115,7 +132,7 @@ h2:hover {
 }
 
 h3 {
-  font-family: 'Base';
+  font-family: 'cube';
   font-size: 2em;
   color: hotpink;
   margin-bottom: 0;
@@ -216,7 +233,7 @@ p:hover {
 }
 
   #clock {
-    font-family: 'Messier';
-    font-size: 2rem;
+    font-family: 'cube';
+    font-size: 2em;
     color: hotpink;
   }
