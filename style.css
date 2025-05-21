@@ -237,3 +237,10 @@ p:hover {
     font-size: 2em;
     color: hotpink;
   }
+
+.ip-text {
+  font-size: 1em;        /* Taille du texte */
+  font-family: 'terminal';
+  font-weight: bold;       /* Texte en gras */
+  color: #000000;          /* Couleur du texte *
+}
