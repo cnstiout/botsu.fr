@@ -11,7 +11,18 @@
     <!-- En-tête -->
     <div class="HEAD">
         <img src="mirroir.jpg" alt="mirroir !" width="200" />
-        <h1 class="mess">BOTS</h1>
+          <h1 class="mess" id="animated-title">BOTS</h1>
+
+          <script>
+            const words = ["OTSB", "BOTS", "SBOT"];
+            let index = 0;
+            const title = document.getElementById("animated-title");
+
+            setInterval(() => {
+              index = (index + 1) % words.length;
+              title.textContent = words[index];
+            }, 100); // change toutes les 2 sec
+          </script>
         <h1 class="terminal">BOTSU.FR</h1>
     </div>
 
@@ -30,6 +41,8 @@
                 </li>
                 <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
                 <li><a href="https://www.cnrtl.fr/">CNRTL</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><a href="https://www.twitch.tv/">Twitch</a></li>
                 <li><a>_________________</a></li>
                 <li><a href="https://chat.openai.com/">ChatGPT</a></li>
                 <li><a>_________________</a></li>
@@ -38,27 +51,36 @@
                 <li><a>_________________</a></li>
                 <li><a href="https://www.ovh.com/manager/">OVH</a></li>
                 <li><a href="https://www.ebay.fr/">ebay</a></li>
-                <li><a href="https://www.amazon.fr/">amazon</a></li>
+                <li><a href="https://www.amazon.fr/">amazon</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
                 <li><a href="https://www.topachat.com/">topachat</a></li>
                 <li><a>_________________</a></li>
                 <li><a href="https://bsky.app/">Bluesky</a></li>
-                <li><a href="https://www.youtube.com/">Youtube</a></li>
-                <li><a href="https://www.twitch.tv/">Twitch</a></li>
-            </ul>
-            
-             <h3>admin</h3>
-            <ul>
-                <li><img src="images/player_Knockout.gif"></li>
+                <li><a href="https://discord.com/">Discord</a></li>
+                <li><a>_________________</a></li>
                 <li><a href="https://ameliconnect.ameli.fr/">Améli</a></li>
                 <li><a href="https://www.impots.gouv.fr/">Impots</a></li>
                 <li><a href="https://www.artistes-auteurs.urssaf.fr/">Urssaf</a></li>
                 <li><a href="https://caf.fr/">CAF</a></li>
                 <li><a href="https://particuliers.engie.fr/">ENGIE</a></li>
+                <li><img src="images/player_Knockout.gif"></li>
             </ul>
             
              <h3>Server</h3>
-                <input type="text" id="ip" value="82.67.30.166:25565" readonly onclick="this.select();">
+                <div class="ip-container">
+                  <div class="ip-text" id="server-ip">82.67.30.166:25565</div>
+                  <button onclick="copyIP()">Copier l’adresse IP</button>
+                </div>
 
+                <script>
+                  function copyIP() {
+                    const ip = document.getElementById("server-ip").textContent;
+                    navigator.clipboard.writeText(ip).then(() => {
+                      alert("Adresse IP copiée ! ✅");
+                    }).catch(err => {
+                      alert("Erreur lors de la copie : " + err);
+                    });
+                  }
+                </script>
             
         </div>
 
@@ -122,7 +144,7 @@
                       setInterval(updateClock, 1000);
                       updateClock();
                     </script>
-        
+            </ul>
             
             
             <h2 >La Semaine</h2>

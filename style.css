@@ -106,12 +106,21 @@ a:hover {
    TYPOGRAPHIE STRUCTURE
 ------------------------ */
 
-h1.mess {
-  font-family: 'Mess';
-  font-size: 128px;
-  color: #ff0b00;
-  margin: -150px 0 30px 200px;
-}
+    h1.mess {
+      font-family: 'Mess', monospace; /* tu peux modifier selon ta police */
+      font-size: 128px;
+      color: #ff0b00;
+      margin: -150px 0 30px 200px;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
 
 h1.terminal {
   font-family: 'Terminal';
