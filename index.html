@@ -146,7 +146,8 @@
                       updateClock();
                     </script>
             </ul>
-            
+
+
             
             <h2 >La Semaine</h2>
             <ul>
@@ -189,7 +190,57 @@
             </ul>
         </div>
         
-    
+     <div id="ascii-webcam-widget">
+              <video autoplay muted playsinline></video>
+              <canvas></canvas>
+              <pre></pre>
+            </div>
+            
+            <script>
+            (async () => {
+              const widget = document.getElementById("ascii-webcam-widget");
+              const video = widget.querySelector("video");
+              const canvas = widget.querySelector("canvas");
+              const pre = widget.querySelector("pre");
+
+              const chars = " .:-=+*#%@";
+              const scaleWidth = 60;
+              const frameRate = 8;
+
+              const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+              video.srcObject = stream;
+              await video.play();
+
+              const { videoWidth, videoHeight } = await new Promise((resolve) => {
+                video.onloadedmetadata = () => resolve(video);
+              });
+
+              const scaleHeight = Math.floor((videoHeight * scaleWidth) / videoWidth);
+              canvas.width = scaleWidth;
+              canvas.height = scaleHeight;
+              const ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+              function draw() {
+                ctx.drawImage(video, 0, 0, scaleWidth, scaleHeight);
+                const { data } = ctx.getImageData(0, 0, scaleWidth, scaleHeight);
+
+                let ascii = "";
+                for (let i = 0; i < data.length; i += 4) {
+                  const r = data[i];
+                  const g = data[i + 1];
+                  const b = data[i + 2];
+                  const brightness = (r + g + b) / 3;
+                  const char = chars[Math.floor((brightness / 255) * chars.length)] || " ";
+                  ascii += char;
+                  if ((i / 4 + 1) % scaleWidth === 0) ascii += "\n";
+                }
+                pre.textContent = ascii;
+                setTimeout(draw, 1000 / frameRate);
+              }
+
+              draw();
+            })();
+            </script>
         
         <div class="rituels">
             <h2 class="rituels">La Journée</h2>

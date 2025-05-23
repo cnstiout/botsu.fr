@@ -254,6 +254,34 @@ p:hover {
   color: #000000;          /* Couleur du texte */
 }
 
+#ascii-webcam-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 2px solid hotpink;
+  padding: 4px;
+  z-index: 9999;
+  font-family: monospace;
+  font-size: 6px;
+  color: hotpink;
+  width: fit-content;
+  height: fit-content;
+}
+
+#ascii-webcam-widget video,
+#ascii-webcam-widget canvas {
+  display: none;
+}
+
+#ascii-webcam-widget pre {
+  margin: 0;
+  white-space: pre;
+  line-height: 6px;
+}
+
+
+
 @media screen and (max-width: 768px) {
   h1.mess {
     font-size: 64px;
