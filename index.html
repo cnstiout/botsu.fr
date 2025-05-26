@@ -25,6 +25,8 @@
           </script>
         <h1 class="terminal">BOTSU.FR</h1>
     </div>
+ 
+        
 
     <div class="container">
         <!-- Bloc navigation -->
@@ -41,7 +43,10 @@
                 </li>
                 <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
                 <li><a href="https://www.cnrtl.fr/">CNRTL</a></li>
+                <li><a href="https://www.geoportail.gouv.fr/carte">Géoportail</a></li>
+                <li><a>_________________</a></li>
                 <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><a href="https://www.youtube.com/">Music</a></li>
                 <li><a href="https://www.twitch.tv/">Twitch</a></li>
                 <li><a>_________________</a></li>
                 <li><a href="https://chat.openai.com/">ChatGPT</a></li>
@@ -54,6 +59,7 @@
                 <li><a href="https://www.ebay.fr/">ebay</a></li>
                 <li><a href="https://www.amazon.fr/">amazon</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
                 <li><a href="https://www.topachat.com/">topachat</a></li>
+                <li><a href="https://www.leboncoin.fr/">leboncoin</a></li>
                 <li><a>_________________</a></li>
                 <li><a href="https://bsky.app/">Bluesky</a></li>
                 <li><a href="https://discord.com/">Discord</a></li>
@@ -149,7 +155,7 @@
 
 
             
-            <h2 >La Semaine</h2>
+            <h2 >Habitudes</h2>
             <ul>
                 
                 <li><p class="semaine"><img src="images/player_Attack.gif">LUNDI</p></li>
@@ -186,61 +192,11 @@
                 <li><a href="https://youtu.be/eHxbMa2RVTQ?si=TR5RSWj8-VqTNppu">Coral Reef Aquarium - 4K HDR 60 fps - no loop</a></li>
                 <li><a href="https://youtu.be/w-VlBV4hmcE?si=I3VMPVtga58UyYat">🌊 𝘣𝘺 𝘵𝘩𝘦 𝘳𝘪𝘷𝘦𝘳𝘴𝘪𝘥𝘦... 𝘮𝘰𝘴𝘵 𝘳𝘦𝘭𝘢𝘹𝘪𝘯𝘨 𝘢𝘯𝘪𝘮𝘢𝘭 𝘤𝘳𝘰𝘴𝘴𝘪𝘯𝘨 𝘮𝘶𝘴𝘪𝘤 (𝘴𝘭𝘰𝘸𝘦𝘥 + 𝘳𝘦𝘷𝘦𝘳𝘣 + 𝘳𝘪𝘷𝘦𝘳 𝘢𝘮𝘣𝘪𝘢𝘯𝘤𝘦)</a></li>
                 <li><a href="https://youtu.be/Gwe5CQsGRzo?si=o4K96aVHj87tNcpa">slowlife... most relaxing garden of france - NO MUSIC - NO LOOP - HD 50FPS </a></li>
+                <li><a href="Camera.html">ASCII CAM</a></li>
                 
             </ul>
         </div>
         
-     <div id="ascii-webcam-widget">
-              <video autoplay muted playsinline></video>
-              <canvas></canvas>
-              <pre></pre>
-            </div>
-            
-            <script>
-            (async () => {
-              const widget = document.getElementById("ascii-webcam-widget");
-              const video = widget.querySelector("video");
-              const canvas = widget.querySelector("canvas");
-              const pre = widget.querySelector("pre");
-
-              const chars = " .:-=+*#%@";
-              const scaleWidth = 60;
-              const frameRate = 8;
-
-              const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-              video.srcObject = stream;
-              await video.play();
-
-              const { videoWidth, videoHeight } = await new Promise((resolve) => {
-                video.onloadedmetadata = () => resolve(video);
-              });
-
-              const scaleHeight = Math.floor((videoHeight * scaleWidth) / videoWidth);
-              canvas.width = scaleWidth;
-              canvas.height = scaleHeight;
-              const ctx = canvas.getContext("2d", { willReadFrequently: true });
-
-              function draw() {
-                ctx.drawImage(video, 0, 0, scaleWidth, scaleHeight);
-                const { data } = ctx.getImageData(0, 0, scaleWidth, scaleHeight);
-
-                let ascii = "";
-                for (let i = 0; i < data.length; i += 4) {
-                  const r = data[i];
-                  const g = data[i + 1];
-                  const b = data[i + 2];
-                  const brightness = (r + g + b) / 3;
-                  const char = chars[Math.floor((brightness / 255) * chars.length)] || " ";
-                  ascii += char;
-                  if ((i / 4 + 1) % scaleWidth === 0) ascii += "\n";
-                }
-                pre.textContent = ascii;
-                setTimeout(draw, 1000 / frameRate);
-              }
-
-              draw();
-            })();
-            </script>
         
         <div class="rituels">
             <h2 class="rituels">La Journée</h2>
