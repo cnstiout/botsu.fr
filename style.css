@@ -283,9 +283,8 @@ p:hover {
   }
 
   a.Pseudo {
-    font-size: 2em;
+    font-size: 5em;
     display: block;
-    text-align: center;
   }
 h2.Pseudo {
     font-size: 2em;
