@@ -126,9 +126,9 @@
                     const body = document.body;
                     body.classList.remove("morning", "afternoon", "evening", "night");
 
-                    if (heures >= 6 && heures < 12) {
+                    if (heures >= 6 && heures < 10) {
                       body.classList.add("morning");
-                    } else if (heures >= 12 && heures < 18) {
+                    } else if (heures >= 10 && heures < 18) {
                       body.classList.add("afternoon");
                     } else if (heures >= 18 && heures < 21) {
                       body.classList.add("evening");
