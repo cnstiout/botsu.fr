@@ -53,7 +53,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'Messier';
   src: url('fonts/bianzhidai-Messier.woff') format('woff');
@@ -79,27 +78,135 @@
 }
 
 /* -----------------------
-   BASE
+   THEMES PAR MOMENT DE LA JOURNÉE
 ------------------------ */
 
-body {
-  background-color: white;
+/* 🌅 MORNING */
+body.morning {
+  background-color: #a5b1b2;
+  color: #000000;
 }
+body.morning a { color: #000000; }
+body.morning a:hover { color: #00ff77; }
+body.morning a.Pseudo { color: #000000; }
+body.morning a.Pseudo:hover { color: #00ff77; }
+body.morning h1.mess { color: #00ff77; }
+body.morning h1.terminal { color: #020202; }
+body.morning h2 { color: #00ff77; background-color: #000000; }
+body.morning h2:hover { background-color: #00ff77; }
+body.morning h3 { color: #fc3f54; }
+body.morning h3:hover { color: black; }
+body.morning #clock { color: #fc3f54; }
+body.morning img:hover { background-color: chartreuse; }
+body.morning p:hover { color: aliceblue; background-color: black;}
+body.morning .ip-text { color: #000000; }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* ☀️ AFTERNOON */
+body.afternoon {
+  background-color: #ffffff;
+  color: #222;
 }
+body.afternoon a { color: #000000; }
+body.afternoon a:hover { color: hotpink; }
+body.afternoon a.Pseudo { color: #000000; }
+body.afternoon a.Pseudo:hover { color: hotpink; }
+body.afternoon h1.mess { color: #ff0b00; }
+body.afternoon h1.terminal { color: #ffb0b0; }
+body.afternoon h2 { color: black; background-color: chartreuse; }
+body.afternoon h2:hover { background-color: aqua; }
+body.afternoon h3 { color: hotpink; }
+body.afternoon h3:hover { color: black; }
+body.afternoon #clock { color: hotpink; }
+body.afternoon img:hover { background-color: hotpink; }
+body.afternoon p:hover { color: aliceblue; background-color: black;}
+body.afternoon .ip-text { color: #000000; }
 
+
+/* 🌇 EVENING */
+body.evening {
+  background-color: #1904ff;
+  color: #ffffff;
+}
+body.evening a { color: #ffffff; }
+body.evening a:hover { color: #ff0000; }
+body.evening a.Pseudo { color: #ffffff; }
+body.evening a.Pseudo:hover { color: #ff0000; }
+body.evening h1.mess { color: #000000; }
+body.evening h1.terminal { color: chartreuse; }
+body.evening h2 { color: black; background-color: #ff0000; }
+body.evening h2:hover { background-color: chartreuse; }
+body.evening h3 { color: chartreuse; }
+body.evening h3:hover { color: black; }
+body.evening #clock { color: chartreuse; }
+body.evening img:hover { background-color: chartreuse; }
+body.evening p:hover { color: aliceblue; background-color: black;}
+body.evening .ip-text { color: #000000; }
+
+/* 🌙 NIGHT */
+body.night {
+  background-color: #000000;
+  color: #ffffff;
+}
+body.night a { color: #ffffff; }
+body.night a:hover { color: #09ff00; }
+body.night a.Pseudo { color: #ffffff; }
+body.night a.Pseudo:hover { color: #09ff00; }
+body.night h1.mess { color: #ff0000; }
+body.night h1.terminal { color: #ffffff; }
+body.night h2 { color: white; background-color: #0013ff; }
+body.night h2:hover { background-color: #ff0000; }
+body.night h3 { color: #ff00ea; }
+body.night h3:hover { color: black; }
+body.night #clock { color: #ff00ea; }
+body.night img:hover { background-color: chartreuse; }
+body.night p:hover { color: aliceblue; background-color: black;}
+body.night .ip-text { color: #000000; }
+
+/* -----------------------
+   BASE & STRUCTURE COMMUNE
+------------------------ */
+
+ul { list-style: none; padding: 0; }
 a {
   font-family: 'Terminal';
   text-decoration: none;
-  color: #222;
   font-size: 1em;
 }
 
-a:hover {
-  color: hotpink;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 0;
+}
+
+img.MIRROIR { height: 128px; }
+
+p {
+  font-family: 'Terminal';
+  font-size: 128px;
+  margin: 0;
+}
+p.heure { font-size: 200px; }
+.semaine {
+  font-family: 'Terminal';
+  font-size: 1em;
+  margin: 0;
+}
+p:hover {
+  margin: 0;
+}
+
+#clock {
+  font-family: 'cube';
+  font-size: 2em;
+}
+
+.ip-text {
+  font-size: 1em;
+  font-family: 'terminal';
+  font-weight: bold;
 }
 
 /* -----------------------
@@ -107,121 +214,35 @@ a:hover {
 ------------------------ */
 
 h1.mess {
-  font-family: 'Mess'; /* tu peux modifier selon ta police */
+  font-family: 'Mess';
   font-size: 128px;
-  color: #ff0b00;
-  margin: -150px 0 30px 200px;
+  margin: -150px 0px 30px 200px;
   transition: opacity 0.5s ease;
-
 }
 
-.fade-out {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-}
+.fade-out { opacity: 0; }
+.fade-in { opacity: 1; }
 
 h1.terminal {
   font-family: 'Terminal';
   font-size: 128px;
-  color: #ffb0b0;
   margin: -180px 0 0 200px;
 }
 
 h2 {
   font-family: 'Terminal';
   font-size: 52px;
-  color: black;
-  background-color: chartreuse;
-}
-
-h2:hover {
-  background-color: aqua;
 }
 
 h3 {
   font-family: 'cube';
   font-size: 2em;
-  color: hotpink;
   margin-bottom: 0;
 }
 
-h3:hover {
-  color: black;
-}
-
-/* -----------------------
-   SPÉCIFIQUE PSEUDO
------------------------- */
 
 a.Pseudo {
   font-size: 128px;
-  color: #000000;
-}
-
-a.Pseudo:hover {
-  color: hotpink;
-}
-
-/* -----------------------
-   STRUCTURE & LAYOUT
------------------------- */
-
-.container {
-  display: flex;
-  flex-wrap: wrap; /* pour le responsive */
-  align-items: flex-start;
-  gap: 3rem;
-  margin-top: 0;
-   /* corrige "justify-content: space" */
-}
-
-.left {
-  width: 200px;
-}
-
-.right {
-  width: auto;
-}
-
-/* -----------------------
-   IMAGES
------------------------- */
-
-img.MIRROIR {
-  height: 128px;
-}
-
-img:hover {
-  background-color: hotpink;
-}
-
-/* -----------------------
-   PARAGRAPHES
------------------------- */
-
-p {
-  font-family: 'Terminal';
-  font-size: 128px;
-  margin: 0;
-}
-
-p.heure {
-  font-size: 200px;
-}
-
-.semaine {
-  font-family: 'Terminal';
-  font-size: 1em;
-  margin: 0;
-}
-
-p:hover {
-    color: aliceblue;
-    background-color: black;
-    margin: 0;
 }
 
 .titre-centre {
@@ -234,27 +255,15 @@ p:hover {
   animation: alternanceCouleur 3s infinite;
 }
 
-/* Animation qui change la couleur de la bordure */
 @keyframes alternanceCouleur {
   0%   { border-color: #00d7ff; }
   33%  { border-color: #6060ff; }
   66%  { border-color: #37ff37; }
   100% { border-color: #00d7ff; }
 }
-
-  #clock {
-    font-family: 'cube';
-    font-size: 2em;
-    color: hotpink;
-  }
-
-.ip-text {
-  font-size: 1em;        /* Taille du texte */
-  font-family: 'terminal';
-  font-weight: bold;       /* Texte en gras */
-  color: #000000;          /* Couleur du texte */
-}
-
+/* -----------------------
+   RESPONSIVE
+------------------------ */
 
 @media screen and (max-width: 768px) {
   h1.mess {
@@ -267,6 +276,7 @@ p:hover {
     margin-top: -78px;
     margin-left: 10px;
   }
+
   .container {
     flex-direction: column;
     gap: 1rem;
@@ -286,10 +296,12 @@ p:hover {
     font-size: 5em;
     display: block;
   }
-h2.Pseudo {
+
+  h2.Pseudo {
     font-size: 2em;
     display: block;
   }
+
   img.rituels {
     width: 100%;
     height: auto;

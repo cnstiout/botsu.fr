@@ -48,7 +48,7 @@
                 <li><a href="https://chat.openai.com/">ChatGPT</a></li>
                 <li><a>_________________</a></li>
                 <li><a href="https://www.youtube.com/">Youtube</a></li>
-                <li><a href="https://www.youtube.com/">Music</a></li>
+                <li><a href="https://music.youtube.com/">Music</a></li>
                 <li><a href="https://www.twitch.tv/">Twitch</a></li>
                 <li><a href="https://franime.fr/">Anime</a></li>
                 <li><a>_________________</a></li>
@@ -111,6 +111,7 @@
                 <li><a  href="https://github.com/cnstiout">Github</a></li>
                 <li><a  href="contact.html">MonMail</a></li>
             </ul>
+            <img src="images/IMG_8637.jpg" alt="mirroir !" height="200" />
         </div>
         
         <div class="horaire">
@@ -118,40 +119,51 @@
                 <ul>
                     <li><span id="clock"></span></li>
                     <script>
-                      function updateClock() {
-                        const now = new Date();
+                  function updateClockAndTheme() {
+                    const now = new Date();
+                    const heures = now.getHours();
 
-                        const jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-                        const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
-                                      'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                    const body = document.body;
+                    body.classList.remove("morning", "afternoon", "evening", "night");
 
-                        const jourNom = jours[now.getDay()];
-                        const jour = now.getDate().toString();
-                        const moisNom = mois[now.getMonth()];
-                        const annee = now.getFullYear();
+                    if (heures >= 6 && heures < 12) {
+                      body.classList.add("morning");
+                    } else if (heures >= 12 && heures < 18) {
+                      body.classList.add("afternoon");
+                    } else if (heures >= 18 && heures < 21) {
+                      body.classList.add("evening");
+                    } else {
+                      body.classList.add("night");
+                    }
 
-                        const heures = now.getHours().toString().padStart(2, '0');
-                        const minutes = now.getMinutes().toString().padStart(2, '0');
-                        const secondes = now.getSeconds().toString().padStart(2, '0');
+                    // Met à jour l’horloge
+                    const jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+                    const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
-                        const heureStr = `${heures}:${minutes}:${secondes}`;
+                    const jourNom = jours[now.getDay()];
+                    const jour = now.getDate().toString();
+                    const moisNom = mois[now.getMonth()];
+                    const annee = now.getFullYear();
 
-                        // Création d’un tableau pour chaque ligne
-                        const lignes = [
-                          jourNom,
-                          jour,
-                          moisNom,
-                          annee,
-                          heureStr
-                        ];
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    const secondes = now.getSeconds().toString().padStart(2, '0');
+                    const heureStr = `${heures.toString().padStart(2, '0')}:${minutes}:${secondes}`;
 
-                        // On joint chaque ligne avec un <br> (saut de ligne HTML)
-                        document.getElementById('clock').innerHTML = lignes.join('<br>');
-                      }
+                    const lignes = [
+                      jourNom,
+                      jour,
+                      moisNom,
+                      annee,
+                      heureStr
+                    ];
 
-                      setInterval(updateClock, 1000);
-                      updateClock();
-                    </script>
+                    document.getElementById('clock').innerHTML = lignes.join('<br>');
+                  }
+
+                  setInterval(updateClockAndTheme, 1000);
+                  updateClockAndTheme();
+                </script>
+
             </ul>
 
 
@@ -195,7 +207,7 @@
                 <li><a href="https://youtu.be/Gwe5CQsGRzo?si=o4K96aVHj87tNcpa">slowlife... most relaxing garden of france - NO MUSIC - NO LOOP - HD 50FPS </a></li>
                 <li><a href="Camera.html">ASCII CAM</a></li>
                 <li><a href="https://youtu.be/L_Eq2r0PbQc?si=Qaqk4pqb1OrRo1vu">Hound Dog - Rocks (432Hz)</a></li>
-                <img src="images/pingu_smaller_face.png" width="200" >
+                <li><img src="images/pingu_smaller_face.png" width="200" ></li>
             </ul>
         </div>
         
@@ -203,7 +215,7 @@
         <div class="rituels">
             <h2 class="rituels">HABITUDES</h2>
             <ul>
-                <li> <img class="rituels" src="images/immeuble.jpg" alt="immeuble !" width="512px" /></li>
+                <li> <img class="rituels" src="images/A6D43FA0-C44D-421D-8D49-BA6372F922EF.JPG" alt="immeuble !" width="512px" /></li>
                 <li><p class="heure">REVEIL</p></li>
                 <li><p>* Se lever</p></li>
                 <li><p>* Aller au Toilette</p></li>
