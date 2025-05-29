@@ -26,9 +26,11 @@
         <h1 class="terminal">BOTSU.FR</h1>
     </div>
  
-        
+
 
     <div class="container">
+        
+        
         <!-- Bloc navigation -->
         <div class="navigation">
             
@@ -190,6 +192,9 @@
             </ul>
         </div>
         <!-- Bloc musique / playlist -->
+        
+
+        
         <div>
             <h2 class="albums">PLAYLIST</h2>
             <ul>
@@ -211,6 +216,9 @@
             </ul>
         </div>
         
+                        <div class="bordereau">
+          <div id="message-scroll" class="scroll-text">Bonjour ! 🌞</div>
+        </div>
         
         <div class="rituels">
             <h2 class="rituels">HABITUDES</h2>
@@ -261,5 +269,28 @@
         
         
     </div>
+        
+    <script>
+  function updateScrollingText() {
+    const hour = new Date().getHours();
+    const scroll = document.getElementById("message-scroll");
+    let message = "";
+
+    if (hour >= 6 && hour < 12) {
+      message = "🌅 Bon matin ! N'oublie pas ton café et ton petit chat !";
+    } else if (hour >= 12 && hour < 18) {
+      message = "🌞 Mange bien, hydrate-toi, fais une pause.";
+    } else if (hour >= 18 && hour < 21) {
+      message = "🌇 Après-midi créatif ? Reste focus et curieux.";
+    } else {
+      message = "🌙 Bonne nuit punpun!";
+    }
+
+    scroll.textContent = message;
+  }
+
+  updateScrollingText();
+</script>
+
     </body>
 </html>
