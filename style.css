@@ -290,6 +290,18 @@ a.Pseudo {
   66%  { border-color: #37ff37; }
   100% { border-color: #00d7ff; }
 }
+.rotate-letter {
+  display: inline-block;
+  font-size: 5rem;
+  animation: spin 2s linear infinite;
+  transform-origin: 50% 28%; /* En haut à gauche */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 /* -----------------------
    RESPONSIVE
 ------------------------ */
