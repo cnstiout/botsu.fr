@@ -11,31 +11,13 @@
     <!-- En-tête -->
     <div class="HEAD">
         <img src="mirroir.jpg" alt="mirroir !" width="200" />
-          <h1 class="mess" id="animated-title">BOTS</h1>
-
-          <script>
-            const words = ["OTSB", "BOTS", "SBOT"];
-            let index = 0;
-            const title = document.getElementById("animated-title");
-
-            setInterval(() => {
-              index = (index + 1) % words.length;
-              title.textContent = words[index];
-            }, 100); // change toutes les 2 sec
-          </script>
+        <h1 class="mess" id="animated-title">BOTS</h1>
         <h1 class="terminal">BOTSU.FR</h1>
     </div>
- 
-
-
     <div class="container">
-        
-        
         <!-- Bloc navigation -->
         <div class="navigation">
-            
             <h2>WWW</h2>
-           
             <ul>
                 <li>
                     <form action="https://duckduckgo.com/" method="get">
@@ -78,26 +60,12 @@
                 <li><a href="https://www.bouyguestelecom.fr/mon-compte/dashboard">Bouygues</a></li>
                 <li><img src="images/player_Knockout.gif"></li>
             </ul>
-            
-             <h3>Server</h3>
-                <div class="ip-container">
-                  <div class="ip-text" id="server-ip">82.67.30.166:25565</div>
-                  <button onclick="copyIP()">Copier l’adresse IP</button>
-                </div>
-
-                <script>
-                  function copyIP() {
-                    const ip = document.getElementById("server-ip").textContent;
-                    navigator.clipboard.writeText(ip).then(() => {
-                      alert("Adresse IP copiée ! ✅");
-                    }).catch(err => {
-                      alert("Erreur lors de la copie : " + err);
-                    });
-                  }
-                </script>
-            
+            <h3>Server</h3>
+            <div class="ip-container">
+                <div class="ip-text" id="server-ip">82.67.30.166:25565</div>
+                <button onclick="copyIP()">Copier l’adresse IP</button>
+            </div>
         </div>
-
         <!-- Bloc pseudo et outils -->
         <div class="Pseudo">
             <h2 class="Pseudo">Xp92KiLLeRpIpOU</h2>
@@ -105,11 +73,7 @@
                 <li><a class="Pseudo" href="https://mail.google.com/">Mail</a></li>
                 <li><a class="Pseudo" href="https://drive.google.com/">Drive</a></li>
                 <li><img src="images/player_Run_oversize.gif" alt="kirby !" width="128" /></li>
-                
             </ul>
-
-           
-            
             <h3>Ce que je fais</h3>
             <ul>
                 <li><a  href="photos">Macros</a></li>
@@ -119,64 +83,13 @@
             </ul>
             <img src="images/IMG_8637.jpg" alt="mirroir !" height="200" />
         </div>
-        
         <div class="horaire">
-                <h2 >HELLO</h2>
-                <ul>
-                    <li><span id="clock"></span></li>
-                    <script>
-                  function updateClockAndTheme() {
-                    const now = new Date();
-                    const heures = now.getHours();
-
-                    const body = document.body;
-                    body.classList.remove("morning", "afternoon", "evening", "night");
-
-                    if (heures >= 6 && heures < 12) {
-                      body.classList.add("morning");
-                    } else if (heures >= 12 && heures < 18) {
-                      body.classList.add("afternoon");
-                    } else if (heures >= 18 && heures < 21) {
-                      body.classList.add("evening");
-                    } else {
-                      body.classList.add("night");
-                    }
-
-                    // Met à jour l’horloge
-                    const jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-                    const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-
-                    const jourNom = jours[now.getDay()];
-                    const jour = now.getDate().toString();
-                    const moisNom = mois[now.getMonth()];
-                    const annee = now.getFullYear();
-
-                    const minutes = now.getMinutes().toString().padStart(2, '0');
-                    const secondes = now.getSeconds().toString().padStart(2, '0');
-                    const heureStr = `${heures.toString().padStart(2, '0')}:${minutes}:${secondes}`;
-
-                    const lignes = [
-                      jourNom,
-                      jour,
-                      moisNom,
-                      annee,
-                      heureStr
-                    ];
-
-                    document.getElementById('clock').innerHTML = lignes.join('<br>');
-                  }
-
-                  setInterval(updateClockAndTheme, 1000);
-                  updateClockAndTheme();
-                </script>
-
-            </ul>
-
-
-
-            <h2 >WORLD</h2>
+            <h2>HELLO</h2>
             <ul>
-                
+                <li><span id="clock"></span></li>
+            </ul>
+            <h2>WORLD</h2>
+            <ul>
                 <li><p class="semaine"><img src="images/player_Attack.gif">LUNDI</p></li>
                 <li><p class="semaine">* Poubelle noires</p></li>
                 <li><p class="semaine"><img src="images/player_Run.gif">MARDI</p></li>
@@ -196,9 +109,6 @@
             </ul>
         </div>
         <!-- Bloc musique / playlist -->
-        
-
-        
         <div>
             <h2 class="albums">PLAYLIST</h2>
             <ul>
@@ -219,28 +129,26 @@
                 <li><img src="images/pingu_smaller_face.png" width="200" ></li>
             </ul>
         </div>
-      
-      <div class="bordereau">
-          <div id="message-scroll" class="scroll-text">Bonjour ! 🌞</div>
+        <div class="bordereau">
+            <div id="message-scroll" class="scroll-text">Bonjour ! 🌞</div>
         </div>
-      <div>
-     <h2 class="albums">NOTICE</h2>
-      <ul>
-      <li><p class="Biographie">Artiste autodidacte, je développe une pratique entre photographie, peinture et dispositifs numériques. </p></li>
-      <li><p class="Biographie">Mes photos capturent des matières altérées ou brillantes (métal, plastique, verre, eau), comme traces fragiles d’un monde en transformation.</p></li>
-      <li><p class="Biographie"> Ma peinture, plus brutale, traduit des états intérieurs liés au deuil, à la solitude ou à la colère.</p></li>
-      <li><p class="Biographie"> À travers installations interactives et écritures en ligne, j’interroge ce qu’Internet change dans les rapports entre générations, dans la mémoire collective et l’intime. </p></li>
-      <li><p class="Biographie">Mes œuvres se répondent et circulent entre ces supports, tissant un lien entre expression instinctive et observation sensible. </p></li>
-      <li><p class="Biographie">Je cherche à faire exister une présence, là où le langage, la distance ou le silence empêchent le contact.</p></li>
-      </ul>        
+        <div>
+            <h2 class="albums">NOTICE</h2>
+            <ul>
+                <li><p class="Biographie">Artiste autodidacte, je développe une pratique entre photographie, peinture et dispositifs numériques. </p></li>
+                <li><p class="Biographie">Mes photos capturent des matières altérées ou brillantes (métal, plastique, verre, eau), comme traces fragiles d’un monde en transformation.</p></li>
+                <li><p class="Biographie"> Ma peinture, plus brutale, traduit des états intérieurs liés au deuil, à la solitude ou à la colère.</p></li>
+                <li><p class="Biographie"> À travers installations interactives et écritures en ligne, j’interroge ce qu’Internet change dans les rapports entre générations, dans la mémoire collective et l’intime. </p></li>
+                <li><p class="Biographie">Mes œuvres se répondent et circulent entre ces supports, tissant un lien entre expression instinctive et observation sensible. </p></li>
+                <li><p class="Biographie">Je cherche à faire exister une présence, là où le langage, la distance ou le silence empêchent le contact.</p></li>
+            </ul>        
         </div>
-            <div>
-              <p> le Vagabond</p> 
-      <img src="images/vagabond.jpg" alt="immeuble !" width="512px" />
-           
-      <p> 2025</p>
-      <p> Acrylique sur toile</p>
-      <p>247 x 183 cm</p>
+        <div>
+            <p> le Vagabond</p> 
+            <img src="images/vagabond.jpg" alt="immeuble !" width="512px" />
+            <p> 2025</p>
+            <p> Acrylique sur toile</p>
+            <p>247 x 183 cm</p>
         </div>
         <div class="rituels">
             <h2 class="rituels">HABITUDES</h2>
@@ -286,36 +194,8 @@
                 <li><p><span class="rotate-letter">*</span> Se Coucher</p></li>
             </ul>
         </div>
-        
-
-        
-        
     </div>
-        
-    <script>
-  function updateScrollingText() {
-    const hour = new Date().getHours();
-    const scroll = document.getElementById("message-scroll");
-    let message = "";
-
-    if (hour >= 6 && hour < 12) {
-      message = "🌅 Bon matin ! N'oublie pas ton café et ton petit chat !";
-    } else if (hour >= 12 && hour < 18) {
-      message = "🌞 Mange bien, hydrate-toi, fais une pause.";
-    } else if (hour >= 18 && hour < 21) {
-      message = "🌇 Après-midi créatif ? Reste focus et curieux.";
-    } else {
-      message = "🌙 Bonne nuit punpun!";
-    }
-
-    scroll.textContent = message;
-  }
-
-  updateScrollingText();
-</script>
-      
-
-
-      
+    <!-- 👇 ICI tu ajoutes la liaison vers ton fichier JS externe -->
+    <script src="scripts.js"></script>
     </body>
 </html>
