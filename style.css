@@ -284,6 +284,10 @@ a.Pseudo {
   animation: alternanceCouleur 3s infinite;
 }
 
+p.Biographie{
+  font-size: 1em;
+}
+
 @keyframes alternanceCouleur {
   0%   { border-color: #00d7ff; }
   33%  { border-color: #6060ff; }
