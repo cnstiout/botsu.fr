@@ -380,6 +380,10 @@ p.Biographie{
     width: 100%;
     height: auto;
   }
+    img.vagabond {
+    width: 100%;
+    height: auto;
+  }
 
   ul {
     padding-left: 0;
