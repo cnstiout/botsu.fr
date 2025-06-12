@@ -104,3 +104,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   updateScrollingText();
 });
+
+function generateCalendar(monthLength) {
+    const today = new Date();
+    const currentDay = today.getDate();
+    const calendar = document.getElementById("calendar");
+    calendar.innerHTML = ""; // reset du contenu
+
+    for (let day = 1; day <= monthLength; day++) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("calendar-day");
+        dayElement.textContent = day;
+
+        if (day < currentDay) {
+            dayElement.classList.add("passed");
+        }
+
+        calendar.appendChild(dayElement);
+    }
+}
+
+// Exemple : pour le mois de juin (30 jours)
+generateCalendar(30);

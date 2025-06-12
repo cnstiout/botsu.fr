@@ -196,6 +196,10 @@ p:hover {
   margin: 0;
 }
 
+#calendrier{
+  font-size: 3em;
+}
+
 #clock {
   font-family: 'cube';
   font-size: 2em;
@@ -221,8 +225,8 @@ p:hover {
 
 .scroll-text {
   display: inline-block;
-  font-family: 'Terminal';
-  font-size: 1.5em;
+  font-family: 'Mess';
+  font-size: 5em;
   color: #00ff77;
   padding-left: 100%;
   animation: scroll-left 15s linear infinite;
@@ -235,6 +239,31 @@ p:hover {
   100% {
     transform: translateX(-150%);
   }
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 30px); /* 7 colonnes pour les jours de la semaine */
+  grid-gap: 10px;
+  margin: 0px 0;
+}
+
+.calendar-day {
+  width: 35px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Terminal';
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+}
+
+.calendar-day.passed {
+  background-color: red;
+  color: white;
 }
 
 
